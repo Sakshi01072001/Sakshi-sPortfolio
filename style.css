@@ -1,0 +1,196 @@
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 2rem 1.5rem 2rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: rgb(53, 58, 64);
+    color: rgb(254, 192, 7);
+    box-shadow: 0 0 1rem white;
+}
+
+.btn-skill {
+    background-image: radial-gradient(circle 489px at 49.3% 46.6%, rgb(255, 213, 122) 0%, rgba(253, 200, 0, 1) 100.2%);
+    border: none;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.btn-skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.4);
+    background-image: radial-gradient(circle 331px at 1.4% 52.9%, rgba(255, 236, 2, 1) 0%, rgba(255, 223, 2, 1) 33.6%, rgba(255, 187, 29, 1) 61%, rgba(255, 175, 7, 1) 100.7%);
+}
+
+.btn-skill:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.5);
+}
+
+.skill-section {
+    background: #1c1c1e;
+    color: #f8f9fa;
+    padding: 3rem 1rem;
+}
+
+.skill-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .skill-buttons {
+        justify-content: start;
+    }
+}
+
+/* Fade-in-up animation */
+.fade-in-up {
+    opacity: 0;
+    /* Start as invisible */
+    transform: translateY(20px);
+    /* Start slightly below its final position */
+    animation: fadeInUp 2s ease forwards;
+    /* Animation applied with ease transition */
+}
+
+/* Delay for each element for a staggered effect */
+.fade-in-up:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.fade-in-up:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.fade-in-up:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.fade-in-up:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.fade-in-up:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.fade-in-up:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+/* Keyframes for fade-in-up animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        /* End with full visibility */
+        transform: translateY(0);
+        /* End at its final position */
+    }
+}
+
+/* Optional: Style for social media icons to add hover effects */
+.social-media a {
+    margin: 0 10px;
+    color: #ffffff;
+    /* Default color for icons */
+    transition: color 0.3s ease;
+    /* Smooth color transition on hover */
+}
+
+.social-media a:hover {
+    color: #ffd700;
+    /* Change color on hover (golden color) */
+}
+
+/* Container and Alignment */
+/* .container {
+    max-width: 900px;
+} */
+
+.timeline {
+    position: relative;
+    margin: 20px 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-marker {
+    width: 20px;
+    height: 15px;
+    background-color: rgb(254, 192, 7);
+    /* Yellow marker */
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-left: 30px;
+    flex-grow: 1;
+}
+
+.timeline-content p {
+    text-align: start;
+    margin: 10px 0px;
+    line-height: 1.6rem;
+
+}
+
+/* Vertical Line */
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    width: 2px;
+    background-color: rgb(254, 192, 7);
+}
+
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-content {
+        margin-left: 20px;
+    }
+
+    .timeline:before {
+        left: 10px;
+    }
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
